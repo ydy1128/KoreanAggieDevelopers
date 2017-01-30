@@ -10,13 +10,20 @@ body{
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
+	background-color: $color-light;
 }
 h1, h2, h3, h4{
 	text-align: center;
-	&.white-titling{
+	color: $color-darkest;
+	&.bold{
 		font-weight: 600;
+	}
+	&.white-titling{
 		text-shadow: 3px 3px 2px #000000;
 		color: $color-light;
+	}
+	&.deem-titling{
+		color: $color-deem;
 	}
 }
 h1{
@@ -34,24 +41,80 @@ h4{
 hr{
 	border-bottom: 1px solid white;
 	&.short-hr{
+		width: 200px;
+	}
+	&.medium-hr{
 		width: 400px;
 	}
+	&.black-hr{
+		border-color: $color-darkest;
+		border-bottom: 1px solid $color-darkest;
+	}
+	&.deem-hr{
+		border-color: $color-deem;
+		border-bottom: 2px solid $color-deem;
+	}
 }
-// ===========================Navigation===========================//
+.left-aligned{
+	margin-left: 20px;
+	text-align: left;
+}
+.right-aligned{
+	margin-right: 20px;
+	text-align: right;
+}
+a{
+	text-decoration: none;
+	&:hover{
+		color: $color-active;
+	}
+	&:focus{
+		color: $color-active;
+	}
+}
+div{
+	&.right{
+		float: right;
+	}
+}
+.btn.btn-default{
+	&:hover{
+		background-color: $color-active;
+	}
+	&:active{
+		background-color: $color-active-dark;
+	}
+	&:focus{
+		background-color: $color-active;
+	}
+}
+.animation-1x{
+	transition: .5s;
+}
+// =========================== Navigation ===========================//
 
 .container-fluid{
 	margin: 0;
 	padding: 50px 0;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
+	&.diff-color{
+		background-color: $color-lightest;
+	}
 }
 .row{
 	padding: 0 5%;
 	margin: 0;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 
-	&>div{
+	&.first{
+		min-height: 100px;
+	}
+	&.last{
+		padding-bottom: 100px;
+	}
+	&>div.col-md-12{
 		width: 100%;
 		height: 100%;
 	}
@@ -68,12 +131,21 @@ hr{
 		font-size: 20px;
 		li a{
 			color: $color-light;
+			&:hover{
+				color: $color-active;
+				text-decoration: none;
+			}
+			&:focus{
+				color: $color-active;
+			}
 		}
 	}
 	.container-fluid{
 		padding: 0;
 	}
 }
+
+// =========================== Intro ===========================//
 
 #intro{
 	background: url(../images/main.png) no-repeat center center;
@@ -91,4 +163,36 @@ hr{
 			float: none;
 		}
 	}
+}
+
+// =========================== Team ===========================//
+
+#team{
+	.profile-short{
+		min-height: 300px;
+	}
+	.col-md-9{
+		padding: 50px 0 0 0;
+	}
+	ul{
+		font-size: $h4-size;
+		.hash-tag{
+			font-size: $h5-size;
+			color: $color-deem;
+		}
+	}
+	img{
+		width: 200px;
+		padding: 30px 0;
+		&.right-aligned{
+			float: right;
+		}
+	}
+}
+
+// =========================== footer ===========================//
+footer{
+	height: 50px;
+	width: 100%;
+	background-color: $color-darkest;
 }

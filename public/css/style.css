@@ -8,14 +8,19 @@ body {
   font-family: 'Titillium Web', sans-serif;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #d6dde8; }
 
 h1, h2, h3, h4 {
-  text-align: center; }
+  text-align: center;
+  color: #1f2122; }
+  h1.bold, h2.bold, h3.bold, h4.bold {
+    font-weight: 600; }
   h1.white-titling, h2.white-titling, h3.white-titling, h4.white-titling {
-    font-weight: 600;
     text-shadow: 3px 3px 2px #000000;
     color: #d6dde8; }
+  h1.deem-titling, h2.deem-titling, h3.deem-titling, h4.deem-titling {
+    color: #575c63; }
 
 h1 {
   font-size: 60px; }
@@ -32,20 +37,62 @@ h4 {
 hr {
   border-bottom: 1px solid white; }
   hr.short-hr {
+    width: 200px; }
+  hr.medium-hr {
     width: 400px; }
+  hr.black-hr {
+    border-color: #1f2122;
+    border-bottom: 1px solid #1f2122; }
+  hr.deem-hr {
+    border-color: #575c63;
+    border-bottom: 2px solid #575c63; }
+
+.left-aligned {
+  margin-left: 20px;
+  text-align: left; }
+
+.right-aligned {
+  margin-right: 20px;
+  text-align: right; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    color: #d4d0af; }
+  a:focus {
+    color: #d4d0af; }
+
+div.right {
+  float: right; }
+
+.btn.btn-default:hover {
+  background-color: #d4d0af; }
+.btn.btn-default:active {
+  background-color: #C9C6A6; }
+.btn.btn-default:focus {
+  background-color: #d4d0af; }
+
+.animation-1x {
+  transition: .5s; }
 
 .container-fluid {
   margin: 0;
   padding: 50px 0;
   width: 100%;
-  height: 100%; }
+  min-height: 100%; }
+  .container-fluid.diff-color {
+    background-color: #ffffff; }
 
 .row {
   padding: 0 5%;
   margin: 0;
   width: 100%;
-  height: 100%; }
-  .row > div {
+  min-height: 100%; }
+  .row.first {
+    min-height: 100px; }
+  .row.last {
+    padding-bottom: 100px; }
+  .row > div.col-md-12 {
     width: 100%;
     height: 100%; }
 
@@ -59,6 +106,11 @@ hr {
     font-size: 20px; }
     .navbar .nav li a {
       color: #d6dde8; }
+      .navbar .nav li a:hover {
+        color: #d4d0af;
+        text-decoration: none; }
+      .navbar .nav li a:focus {
+        color: #d4d0af; }
   .navbar .container-fluid {
     padding: 0; }
 
@@ -74,5 +126,25 @@ hr {
       width: 160px;
       margin: 20px 40px;
       float: none; }
+
+#team .profile-short {
+  min-height: 300px; }
+#team .col-md-9 {
+  padding: 50px 0 0 0; }
+#team ul {
+  font-size: 20px; }
+  #team ul .hash-tag {
+    font-size: 16px;
+    color: #575c63; }
+#team img {
+  width: 200px;
+  padding: 30px 0; }
+  #team img.right-aligned {
+    float: right; }
+
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: #1f2122; }
 
 /*# sourceMappingURL=style.css.map */

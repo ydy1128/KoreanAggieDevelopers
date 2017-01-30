@@ -26,10 +26,9 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#assign">Team</a></li>
-                    <li><a href="#export">Projects</a></li>
-                    <li><a href="#account">Contact</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
           </div>
@@ -38,14 +37,14 @@
       </div>
     </div>
     <div id="intro" class="container-fluid">
-    	<div class="row">
+    	<div class="row full-div">
     		<div class="col-md-12">
     			<div id="intro-contents">
-    				<h1 class="white-titling">Korean Aggies Developers</h1>
-    				<hr class="short-hr" />
+    				<h1 class="white-titling bold">Korean Aggies Developers</h1>
+    				<hr class="medium-hr" />
     				<h4 class="white-titling">Association of Korean Student Developers for a Solid Software Engineering Practice</h4>
     				<ul class="list-inline">
-	    				<li><a class="btn btn-default btn-lg"><i class="fa fa-user"></i> Developers</a></li>
+	    				<li><a class="btn btn-default btn-lg" href="#team"><i class="fa fa-user"></i> Developers</a></li>
 	    				<li><a class="btn btn-default btn-lg"><i class="fa fa-file-text"></i> Projects</a></li>
 
     				</ul>
@@ -53,5 +52,43 @@
     		</div>
     	</div>
     </div>
+    <div id="team" class="container-fluid"  ng-app="devApp" ng-controller="devCtrl" >
+    	<div class="row first">
+    		<div class="col-md-12">
+    			<h2 class="bold">Our Developers</h2>
+			</div>
+		</div>
+    	<div class="row profile-short" ng-repeat="x in developers">
+    		<div class="col-md-3 {{ x.Side }}">
+	    		<img class="{{ x.Side }}-aligned" ng-src="images/{{ x.Image }}" />
+    		</div>
+    		<div class="col-md-9 {{ x.Side }}">
+    			<hr class="short-hr deem-hr {{ x.Side }}-aligned" />
+    			<h3 class="{{ x.Side }}-aligned deem-titling">{{ x.Name }}</h3>
+    			<ul class="list-unstyled {{ x.Side }}-aligned">
+    				<li>{{ x.Major }}</li>
+    				<li>{{ x.Role }}</li>
+    				<li class="hash-tag">
+						<span ng-repeat="y in x.Languages">#{{ y }} </span>
+    				</li>
+    				<li class="hash-tag">
+						<span ng-repeat="y in x.Fields">#{{ y }} </span>
+    				</li>
+    				<li ng-if="x.Link != ''"><a target="_blank" href="{{ x.Link }}">Personal Website</a></li>
+    			</ul>
+    		</div>
+		</div>
+	</div>
+<!--     <div id="projects" class="container-fluid diff-color"  ng-app="devApp" ng-controller="devCtrl" >
+    	<div class="row first">
+    		<div class="col-md-12">
+    			<h2 class="bold">Our Projects</h2>
+			</div>
+		</div>
+	</div> -->
+    <footer>
+		
+	</footer>
+    <script src="js/dev.js"></script>
 </body>
 </html>
