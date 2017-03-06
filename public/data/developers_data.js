@@ -4,7 +4,7 @@ var data = {
 		{
 			"Name" : "DaeYoung Yoon",
 			"Major" : "Computer Science Major",
-			"Role" : "Lead & Front-End Developer",
+			"Role" : "Lead & Full-Stack Developer",
 			"Languages" : ["Python", "JavaScript", "C++"],
 			"Fields" : ["Computer Human Interaction", "Data Science", "Network Security"],
 			"Image" : "johnny.png",
